@@ -1,14 +1,23 @@
-/* Reset & Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* General */
 body {
-  line-height: 1.6;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
   color: #333;
-  background-color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  line-height: 1.6;
+}
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  color: #4e2a0a;
+}
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.section-intro {
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #444;
 }
 
 /* Navbar */
@@ -16,248 +25,162 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #4e2a0a; /* Deep maroon/brown for Marathi feel */
-  padding: 10px 20px;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background: #f8f1e4;
+  padding: 15px 20px;
 }
-.logo {
-  font-size: 1.8rem;
+.navbar .logo {
+  font-size: 24px;
   font-weight: bold;
-  font-family: 'Playfair Display', serif;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-.nav-links a:hover {
-  color: #f2b705; /* Saffron accent on hover */
-}
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-/* Hero Banner */
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-              url("images/hero-banner.jpg") center/cover no-repeat;
-  color: #fff;
-  text-align: center;
-  padding: 100px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-}
-.hero-content {
-  max-width: 700px;
-}
-.hero h1 {
-  font-size: 2.4rem;
-  margin-bottom: 15px;
-  font-family: 'Playfair Display', serif;
-  line-height: 1.3;
-}
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-}
-.hero-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.hero .cta-btn {
-  background-color: #25D366; /* WhatsApp green */
-  color: #fff;
-  padding: 12px 20px;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-.hero .cta-btn:hover {
-  background-color: #20b958;
-}
-.hero .secondary-btn {
-  background: #fff;
-  color: #333;
-  padding: 10px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-.hero .secondary-btn:hover {
-  background: #f1f1f1;
-}
-@media (min-width: 600px) {
-  .hero-buttons {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Sections */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-.section h2 {
-  margin-bottom: 30px;
-  font-size: 1.8rem;
-  font-family: 'Playfair Display', serif;
   color: #4e2a0a;
 }
-
-/* Classes Section */
-.classes .subtitle {
-  max-width: 700px;
-  margin: 0 auto 30px;
-  font-size: 1.1rem;
-  color: #555;
-}
-.classes-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.nav-links {
+  display: flex;
   gap: 20px;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #4e2a0a;
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.cta-btn {
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Classes */
+.class-cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .class-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   background: #fafafa;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-  text-align: center;
 }
 .class-card h3 {
   margin-bottom: 10px;
-  font-size: 1.3rem;
-  color: #4e2a0a;
 }
-.class-card p {
-  margin-bottom: 15px;
-  color: #444;
-}
-.class-card:hover {
-  transform: scale(1.03);
-}
-.class-card a.cta-btn {
-  display: inline-block;
-  margin-top: 10px;
+.class-card .cta-btn, .class-card .btn {
+  margin-top: 15px;
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 
-/* Gallery (Products) */
+/* Gallery */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
   gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .card {
-  background: #fafafa;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.2s;
-  text-align: center;
 }
 .card img {
   width: 100%;
-  display: block;
+  height: 250px;
+  object-fit: cover;
 }
 .card p {
   padding: 10px;
   font-weight: bold;
-}
-.card:hover {
-  transform: scale(1.03);
+  color: #4e2a0a;
 }
 
-/* Trends */
-.trends {
-  display: grid;
-  gap: 20px;
+/* Buttons */
+.btn, .cta-btn, .instagram-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
-.trends article {
-  background: #f5f5f5;
+
+/* WhatsApp button */
+.cta-btn, .btn.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+}
+.cta-btn:hover, .btn.whatsapp-btn:hover {
+  background-color: #20b958;
+}
+
+/* Instagram button */
+.instagram-btn {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  color: white;
+}
+.instagram-btn:hover {
+  opacity: 0.9;
+}
+
+/* Location block */
+.location-block {
+  margin: 30px auto;
   padding: 20px;
-  border-radius: 10px;
+  background: #fafafa;
+  border-left: 5px solid #4e2a0a;
+  max-width: 600px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
   text-align: left;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
-.trends h3 {
+.location-block h3 {
   margin-bottom: 10px;
   color: #4e2a0a;
 }
 
-/* Footer */
-footer {
-  background: #4e2a0a;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-}
-
-/* Mobile Menu */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #4e2a0a;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    padding: 10px;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .nav-links li {
-    margin: 10px 0;
-  }
-  .menu-toggle {
-    display: block;
-  }
-}
-
-/* Floating WhatsApp Button */
+/* Floating WhatsApp */
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
   bottom: 20px;
   right: 20px;
   background-color: #25D366;
+  color: white;
+  font-size: 28px;
+  padding: 15px;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   z-index: 1000;
-  transition: transform 0.3s ease;
-}
-.whatsapp-float img {
-  width: 35px;
-  height: 35px;
 }
 .whatsapp-float:hover {
-  transform: scale(1.1);
+  background: #20b958;
+}
+
+/* Footer */
+footer {
+  background: #f8f1e4;
+  padding: 15px;
+  text-align: center;
+  color: #4e2a0a;
+  font-size: 14px;
 }
