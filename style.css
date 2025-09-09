@@ -54,7 +54,8 @@ h1, h2, h3 {
 /* Hero */
 .hero {
   background: url('images/hero-bg.jpg') center/cover no-repeat;
-  color: red;
+  color: #000000;     /* black color */
+  font-weight: bold;  /* makes text bold */
   text-align: center;
   padding: 100px 20px;
 }
@@ -194,4 +195,5 @@ footer {
   .hero-text p { font-size: 14px; }
   .card { width: 100%; }
 }
+
 
