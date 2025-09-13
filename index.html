@@ -5,16 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anjali Boutique</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* --- Top Banner (like Edge message) --- */
+    .top-banner {
+      background: #f1f1f1;
+      border-bottom: 1px solid #ddd;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 14px;
+      position: sticky;
+      top: 0;
+      z-index: 2000;
+    }
+    .top-banner strong {
+      color: #b03060;
+      font-size: 15px;
+    }
+    .top-banner small {
+      display: block;
+      margin-top: 3px;
+      color: #555;
+    }
+    .banner-close {
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      color: #444;
+      margin-left: 15px;
+    }
+    .banner-close:hover { color: #000; }
+  </style>
 </head>
 <body>
+
+  <!-- Top Banner -->
+  <div class="top-banner" id="topBanner">
+    <div>
+      <strong>✨ New! Boutique Classes Available ✨</strong>
+      <small>Join Anjali Boutique to learn blouse & saree design. Limited seats — enroll today!</small>
+    </div>
+    <span class="banner-close" onclick="document.getElementById('topBanner').style.display='none'">✕</span>
+  </div>
 
   <!-- Navbar -->
   <header>
     <nav class="navbar">
       <h1 class="logo">Anjali Boutique</h1>
-      <div class="menu-toggle" id="menuToggle">☰</div>
-      <ul class="nav-links" id="navLinks">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#classes">Classes</a></li>
         <li><a href="#products">Products</a></li>
@@ -25,7 +66,7 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Banner -->
   <section class="hero" id="home">
     <div class="hero-text">
       <h1>Learn the Art of Blouse & Saree Design</h1>
@@ -36,68 +77,103 @@
   </section>
 
   <!-- Classes Section -->
-  <section id="classes">
-    <h2>Our Classes</h2>
+  <section id="classes" class="section">
+    <h2>👩‍🎓 Our Classes</h2>
+    <p class="section-intro">We offer beginner to advanced blouse & saree design classes.<br>
+       मराठीत व इंग्रजीत मार्गदर्शन उपलब्ध आहे.</p>
     <div class="class-cards">
       <div class="class-card">
-        <h3>Blouse Stitching</h3>
-        <p>Master traditional and modern blouse designs with step-by-step training.</p>
+        <h3>Beginner Course</h3>
+        <p>Learn the basics of Marathi blouse cutting, stitching & saree draping.</p>
+        <a href="https://wa.me/919527231973?text=Namaste!%20I%20want%20to%20register%20for%20the%20Beginner%20Course." 
+           target="_blank" class="btn whatsapp-btn">📲 Register on WhatsApp</a>
       </div>
       <div class="class-card">
-        <h3>Saree Draping</h3>
-        <p>Learn authentic Marathi draping styles for weddings & cultural events.</p>
-      </div>
-      <div class="class-card">
-        <h3>Lugda Styling</h3>
-        <p>Special training for Navari saree & unique regional variations.</p>
+        <h3>Advanced Course</h3>
+        <p>Master designer blouses, embroidery, and modern draping styles.</p>
+        <a href="https://wa.me/919527231973?text=Namaste!%20I%20want%20to%20register%20for%20the%20Advanced%20Course." 
+           target="_blank" class="btn whatsapp-btn">📲 Register on WhatsApp</a>
       </div>
     </div>
   </section>
 
   <!-- Products Section -->
-  <section id="products">
+  <section id="products" class="section">
     <h2>Our Collection</h2>
     <div class="gallery">
       <div class="card">
-        <img src="images/saree1.jpg" alt="Navari Saree">
-        <p>Traditional Navari Saree</p>
+        <img src="images/nauvari-saree.jpg" alt="Navari Saree">
+        <p>Marathi Navari Saree</p>
       </div>
       <div class="card">
-        <img src="images/lugda1.jpg" alt="Lugda">
-        <p>Authentic Lugda</p>
-      </div>
-      <div class="card">
-        <img src="images/blouse1.jpg" alt="Blouse Design">
+        <img src="images/designer-blouse.jpg" alt="Blouse Design">
         <p>Designer Blouse</p>
+      </div>
+      <div class="card">
+        <img src="images/lugda.jpg" alt="Traditional Lugda">
+        <p>Traditional Lugda</p>
       </div>
     </div>
   </section>
 
   <!-- Trends Section -->
-  <section id="trends">
+  <section id="trends" class="section">
     <h2>Latest Trends</h2>
-    <p>Stay updated with new blouse designs, saree styling tips, and festival fashion ideas!</p>
+    <div class="trends">
+      <article>
+        <h3>5 Trending Blouse Designs for 2025</h3>
+        <p>Explore the latest sleeve cuts, embroidery patterns, and fabrics making waves this year.</p>
+      </article>
+      <article>
+        <h3>Modern Draping Styles for Navari Sarees</h3>
+        <p>Fusion drapes that combine tradition with modern flair.</p>
+      </article>
+    </div>
   </section>
 
   <!-- About Section -->
-  <section id="about">
+  <section id="about" class="section">
     <h2>About Us</h2>
-    <p>Anjali Boutique is dedicated to bringing Marathi tradition to life with elegant sarees, blouses, and personalized stitching classes.</p>
+    <p>
+      Founded by <strong>Anjali Patil</strong>, Anjali Boutique celebrates the essence of 
+      Marathi tradition through authentic Navari sarees and handcrafted blouse designs. 
+      Every piece is a blend of heritage and elegance, tailored with care in Akola.
+    </p>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <p>📞 Call/WhatsApp: <a href="tel:+919876543210">+91 98765 43210</a></p>
-    <p>📍 Location: Pune, Maharashtra</p>
+
+    <!-- Location Block -->
+    <div class="location-block">
+      <h3>📍 Visit Us</h3>
+      <p><strong>Anjali Boutique</strong><br>
+      Rajapeth, Akola, Maharashtra – 444001</p>
+      <p>🕙 Open: Mon–Sat, 10 AM – 7 PM</p>
+    </div>
+
+    <p>📞 +91 9527231973</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/919527231973?text=Hello%20Anjali%20Boutique!%20I%20am%20interested%20in%20your%20products." 
+         target="_blank" class="btn whatsapp-btn">Chat on WhatsApp</a>
+      <a href="https://www.instagram.com/anjalipatil26459" target="_blank" class="btn instagram-btn">📸 Follow on Instagram</a>
+    </div>
+
+    <!-- Google Map -->
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.8539385813456!2d77.01185317396127!3d20.71615498085611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd72f3409cb86d1%3A0x71be8b674b50436c!2sAnjali&#39;s%20Boutique!5e0!3m2!1sen!2sin!4v1756390169457!5m2!1sen!2sin" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
   </section>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/919876543210" class="whatsapp-float">💬</a>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919527231973?text=नमस्कार!%20I%20am%20interested%20in%20Anjali%20Boutique%20Classes." 
+     class="whatsapp-float" target="_blank">💬</a>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Anjali Boutique | All Rights Reserved</p>
+    <p>&copy; 2025 Anjali Boutique | Designed with ❤️ in Akola</p>
   </footer>
 
   <script src="script.js"></script>
