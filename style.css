@@ -131,3 +131,39 @@ body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; color: #333; backgrou
   background: #25D366;
   color: white;
   font-size: 24px;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  z-index: 2000;
+  text-decoration: none;
+}
+
+/* Footer */
+footer { background: #f8f1e4; padding: 12px; text-align: center; color: #4e2a0a; font-size: 13px; }
+
+/* ------------- Responsive ------------- */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  .nav-links {
+    position: absolute;
+    top: 108px; /* below top-banner + navbar */
+    right: 0;
+    background: #f8f1e4;
+    flex-direction: column;
+    width: 220px;
+    padding: 12px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .nav-links.active { display: flex; }
+  .hero { padding: 36px 16px; }
+  .decorative-banner { aspect-ratio: 4 / 3; min-height: 180px; }
+  .card { width: 100%; }
+  .nav-links a { padding: 8px 6px; }
+}
+
+@media (max-width: 480px) {
+  .decorative-banner { aspect-ratio: 1 / 1; min-height: 160px; }
+  .hero-text h1 { font-size: 22px; }
+  .hero-text p { font-size: 14px; }
+}
