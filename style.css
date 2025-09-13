@@ -50,6 +50,14 @@ h1, h2, h3 {
   font-size: 26px;
   cursor: pointer;
 }
+/*bannneer*/
+.banner {
+  background-image: url('https://lugdabydihi.com/cdn/shop/files/CHJ1313_ddbaead1-aeba-490e-998d-188fcf7018ab.jpg?v=1752847274&width=1946');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  /* ensures the image fills the banner responsively */
+  height: 400px;           /* adjust banner height as needed */
+}
 
 /* Hero */
 .hero {
@@ -195,5 +203,6 @@ footer {
   .hero-text p { font-size: 14px; }
   .card { width: 100%; }
 }
+
 
 
