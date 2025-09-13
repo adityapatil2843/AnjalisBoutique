@@ -1,112 +1,164 @@
-/* Reset & base */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { 
-  font-family: 'Poppins', sans-serif; 
-  color: #3a2e2e; 
-  background: #fffdf9; 
-  line-height: 1.7; 
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-h1, h2, h3 { font-family: 'Playfair Display', serif; }
-
-/* --- Top Banner --- */
-.top-banner {
-  background: linear-gradient(90deg, #fbe9f0, #fff8f0);
-  border-bottom: 1px solid #ddd;
-  padding: 10px 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-  position: sticky;
-  top: 0;
-  z-index: 2000;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
 }
-.top-banner strong { color: #8b1538; font-size: 15px; }
-.top-banner small { display: block; color: #555; margin-top: 3px; }
-.banner-close { background: transparent; border: none; cursor: pointer; font-size: 18px; color: #666; }
-.banner-close:hover { color: #000; }
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  color: #4e2a0a;
+}
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
 
-/* --- Navbar --- */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fffaf4;
-  padding: 14px 20px;
+  background: #f8f1e4;
+  padding: 12px 20px;
   position: sticky;
-  top: 48px;
-  z-index: 1500;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  top: 0;
+  z-index: 100;
 }
-.logo { font-size: 24px; font-weight: 700; color: #6a1b2d; letter-spacing: 1px; }
-.menu-toggle { display: none; font-size: 26px; cursor: pointer; background: transparent; border: none; }
-
-/* Nav links */
-.nav-links { display: flex; gap: 18px; list-style: none; }
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4e2a0a;
+}
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
 .nav-links a {
   text-decoration: none;
-  color: #6a1b2d;
+  color: #4e2a0a;
   font-weight: 500;
-  padding: 6px 8px;
-  transition: color 0.3s;
 }
-.nav-links a:hover { color: #d49b3e; }
-
-/* Decorative banner */
-.decorative-banner {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  min-height: 220px;
-  background-image: url('images/4a9bcbf9-a82a-41aa-9fda-1c8e7fc246a9.jpg');
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+/*bannneer*/
+.banner {
+  background-image: url('https://lugdabydihi.com/cdn/shop/files/CHJ1313_ddbaead1-aeba-490e-998d-188fcf7018ab.jpg?v=1752847274&width=1946');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  border-bottom: 4px solid #d49b3e;
+  background-size: cover;  /* ensures the image fills the banner responsively */
+  height: 400px;           /* adjust banner height as needed */
 }
 
 /* Hero */
 .hero {
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  color: #000000;     /* black color */
+  font-weight: bold;  /* makes text bold */
   text-align: center;
-  padding: 60px 20px;
+  padding: 100px 20px;
 }
 .hero-text h1 {
-  font-size: 36px;
-  color: #6a1b2d;
+  font-size: 32px;
   margin-bottom: 12px;
 }
-.hero-text p { font-size: 17px; margin-bottom: 20px; }
+.hero-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
 .cta-btn {
-  background-color: #6a1b2d;
+  background-color: #25D366;
   color: white;
-  padding: 12px 20px;
+  padding: 12px 18px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
+  display: inline-block;
+}
+
+/* Classes */
+.class-cards {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.class-card {
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+}
+.class-card h3 {
+  margin-bottom: 8px;
+}
+.class-card .btn {
+  margin-top: 12px;
+  width: 100%;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card p {
+  padding: 8px;
+  font-weight: bold;
+  color: #4e2a0a;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
   transition: 0.3s;
 }
-.cta-btn:hover { background: #d49b3e; color: #fff; }
-
-/* Sections */
-.section { padding: 60px 20px; text-align: center; }
-.section h2 { color: #6a1b2d; margin-bottom: 18px; font-size: 28px; }
-
-/* Cards */
-.class-card, .card {
-  padding: 18px;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-  transition: transform 0.25s;
-}
-.class-card:hover, .card:hover { transform: translateY(-5px); }
-
-/* WhatsApp Button */
 .whatsapp-btn {
   background: #25D366;
-  color: #fff;
+  color: white;
 }
-.whatsapp-btn:hover { background: #1ebe5c; }
+.whatsapp-btn:hover { background: #20b958; }
+.instagram-btn {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  color: white;
+}
+.instagram-btn:hover { opacity: 0.9; }
+
+/* Location */
+.location-block {
+  margin: 20px auto;
+  padding: 15px;
+  background: #fafafa;
+  border-left: 5px solid #4e2a0a;
+  max-width: 600px;
+  border-radius: 6px;
+  text-align: left;
+}
 
 /* Floating WhatsApp */
 .whatsapp-float {
@@ -116,19 +168,38 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
   background: #25D366;
   color: white;
   font-size: 24px;
-  padding: 14px;
+  padding: 12px;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  z-index: 2000;
-  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
 }
+.whatsapp-float:hover { background: #20b958; }
 
 /* Footer */
 footer {
-  background: #fffaf4;
-  padding: 16px;
+  background: #f8f1e4;
+  padding: 12px;
   text-align: center;
-  color: #6a1b2d;
-  font-size: 14px;
-  border-top: 2px solid #d49b3e;
+  color: #4e2a0a;
+  font-size: 13px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #f8f1e4;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    display: none;
+  }
+  .nav-links.active { display: flex; }
+  .menu-toggle { display: block; }
+
+  .hero-text h1 { font-size: 24px; }
+  .hero-text p { font-size: 14px; }
+  .card { width: 100%; }
 }
