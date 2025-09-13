@@ -1,10 +1,16 @@
 /* Reset & base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; color: #333; background: #fff; line-height: 1.6; }
+body { 
+  font-family: 'Poppins', sans-serif; 
+  color: #3a2e2e; 
+  background: #fffdf9; 
+  line-height: 1.7; 
+}
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-/* --- Top small sticky info banner --- */
+/* --- Top Banner --- */
 .top-banner {
-  background: #f1f1f1;
+  background: linear-gradient(90deg, #fbe9f0, #fff8f0);
   border-bottom: 1px solid #ddd;
   padding: 10px 18px;
   display: flex;
@@ -15,113 +21,92 @@ body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; color: #333; backgrou
   top: 0;
   z-index: 2000;
 }
-.top-banner .top-banner-text strong { color: #b03060; font-size: 15px; }
+.top-banner strong { color: #8b1538; font-size: 15px; }
 .top-banner small { display: block; color: #555; margin-top: 3px; }
-.banner-close, .banner-close:focus, #closeTopBanner {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  color: #444;
-}
-.banner-close:hover, #closeTopBanner:hover { color: #000; }
+.banner-close { background: transparent; border: none; cursor: pointer; font-size: 18px; color: #666; }
+.banner-close:hover { color: #000; }
 
-/* ------------- Navbar ------------- */
+/* --- Navbar --- */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f8f1e4;
-  padding: 12px 20px;
+  background: #fffaf4;
+  padding: 14px 20px;
   position: sticky;
-  top: 48px; /* sits below the tiny top-banner */
+  top: 48px;
   z-index: 1500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
-.logo { font-size: 20px; font-weight: 700; color: #4e2a0a; }
+.logo { font-size: 24px; font-weight: 700; color: #6a1b2d; letter-spacing: 1px; }
 .menu-toggle { display: none; font-size: 26px; cursor: pointer; background: transparent; border: none; }
 
-/* Desktop nav */
-.nav-links {
-  display: flex;
-  gap: 15px;
-  list-style: none;
+/* Nav links */
+.nav-links { display: flex; gap: 18px; list-style: none; }
+.nav-links a {
+  text-decoration: none;
+  color: #6a1b2d;
+  font-weight: 500;
+  padding: 6px 8px;
+  transition: color 0.3s;
 }
-.nav-links a { text-decoration: none; color: #4e2a0a; font-weight: 500; padding: 6px 8px; }
+.nav-links a:hover { color: #d49b3e; }
 
-/* ------------- Decorative banner (standalone) ------------- */
+/* Decorative banner */
 .decorative-banner {
   width: 100%;
-  /* preferred modern approach */
   aspect-ratio: 16 / 9;
-  min-height: 220px; /* ensures some height in older browsers */
+  min-height: 220px;
   background-image: url('images/4a9bcbf9-a82a-41aa-9fda-1c8e7fc246a9.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  border-bottom: 4px solid #d49b3e;
 }
 
-/* Fallback for very old browsers: padding-top trick (keeps ratio) */
-@supports not (aspect-ratio: 1/1) {
-  .decorative-banner { height: 0; padding-top: 56.25%; background-size: cover; }
-}
-
-/* ------------- Hero ------------- */
+/* Hero */
 .hero {
-  background: none;
-  color: #000;
   text-align: center;
   padding: 60px 20px;
 }
-.hero-text h1 { font-family: 'Georgia', serif; font-size: 32px; color: #4e2a0a; margin-bottom: 10px; }
-.hero-text p { font-size: 16px; margin-bottom: 18px; }
+.hero-text h1 {
+  font-size: 36px;
+  color: #6a1b2d;
+  margin-bottom: 12px;
+}
+.hero-text p { font-size: 17px; margin-bottom: 20px; }
 .cta-btn {
-  background-color: #25D366;
+  background-color: #6a1b2d;
   color: white;
-  padding: 12px 18px;
+  padding: 12px 20px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
+  transition: 0.3s;
 }
+.cta-btn:hover { background: #d49b3e; color: #fff; }
 
-/* ------------- Sections ------------- */
-.section { padding: 50px 20px; text-align: center; }
-.section h2 { font-family: 'Georgia', serif; color: #4e2a0a; margin-bottom: 12px; }
+/* Sections */
+.section { padding: 60px 20px; text-align: center; }
+.section h2 { color: #6a1b2d; margin-bottom: 18px; font-size: 28px; }
 
-/* Classes cards */
-.class-cards {
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin-top: 18px;
-}
-.class-card {
+/* Cards */
+.class-card, .card {
   padding: 18px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  transition: transform 0.25s;
 }
-.class-card h3 { margin-bottom: 8px; }
-.btn { display: inline-block; padding: 10px 15px; border-radius: 6px; font-weight: 600; text-decoration: none; transition: 0.25s; }
-.whatsapp-btn { background: #25D366; color: #fff; }
-.whatsapp-btn:hover { transform: translateY(-2px); }
+.class-card:hover, .card:hover { transform: translateY(-5px); }
 
-/* Gallery */
-.gallery { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
-.card { width: 200px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: #fff; }
-.card img { width: 100%; height: 180px; object-fit: cover; display: block; }
-.card p { padding: 8px; font-weight: bold; color: #4e2a0a; text-align: center; }
-
-/* Location block & map */
-.location-block {
-  margin: 20px auto;
-  padding: 15px;
-  background: #fafafa;
-  border-left: 5px solid #4e2a0a;
-  max-width: 600px;
-  border-radius: 6px;
-  text-align: left;
+/* WhatsApp Button */
+.whatsapp-btn {
+  background: #25D366;
+  color: #fff;
 }
-.map-container iframe { border: 0; border-radius: 6px; display: block; margin: 16px auto 0; }
+.whatsapp-btn:hover { background: #1ebe5c; }
 
 /* Floating WhatsApp */
 .whatsapp-float {
@@ -131,39 +116,19 @@ body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; color: #333; backgrou
   background: #25D366;
   color: white;
   font-size: 24px;
-  padding: 12px;
+  padding: 14px;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   z-index: 2000;
   text-decoration: none;
 }
 
 /* Footer */
-footer { background: #f8f1e4; padding: 12px; text-align: center; color: #4e2a0a; font-size: 13px; }
-
-/* ------------- Responsive ------------- */
-@media (max-width: 768px) {
-  .menu-toggle { display: block; }
-  .nav-links {
-    position: absolute;
-    top: 108px; /* below top-banner + navbar */
-    right: 0;
-    background: #f8f1e4;
-    flex-direction: column;
-    width: 220px;
-    padding: 12px;
-    display: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
-  .nav-links.active { display: flex; }
-  .hero { padding: 36px 16px; }
-  .decorative-banner { aspect-ratio: 4 / 3; min-height: 180px; }
-  .card { width: 100%; }
-  .nav-links a { padding: 8px 6px; }
-}
-
-@media (max-width: 480px) {
-  .decorative-banner { aspect-ratio: 1 / 1; min-height: 160px; }
-  .hero-text h1 { font-size: 22px; }
-  .hero-text p { font-size: 14px; }
+footer {
+  background: #fffaf4;
+  padding: 16px;
+  text-align: center;
+  color: #6a1b2d;
+  font-size: 14px;
+  border-top: 2px solid #d49b3e;
 }
