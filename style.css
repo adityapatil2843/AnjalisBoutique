@@ -1,205 +1,109 @@
-/* Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
   color: #333;
   background: #fff;
-  line-height: 1.6;
 }
+
 h1, h2, h3 {
-  font-family: 'Georgia', serif;
+  font-family: 'Playfair Display', serif;
   color: #4e2a0a;
 }
-.section {
-  padding: 50px 20px;
-  text-align: center;
-}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f8f1e4;
   padding: 12px 20px;
+  background: #f8f1e4;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
-.navbar .logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #4e2a0a;
-}
+.logo { font-size: 20px; font-weight: bold; }
+.menu-toggle { font-size: 26px; cursor: pointer; display: block; }
 .nav-links {
-  display: flex;
-  gap: 15px;
-  list-style: none;
-}
-.nav-links a {
-  text-decoration: none;
-  color: #4e2a0a;
-  font-weight: 500;
-}
-.menu-toggle {
   display: none;
-  font-size: 26px;
-  cursor: pointer;
+  flex-direction: column;
+  gap: 12px;
+  background: #f8f1e4;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-/*bannneer*/
-.banner {
-  background-image: url('https://lugdabydihi.com/cdn/shop/files/CHJ1313_ddbaead1-aeba-490e-998d-188fcf7018ab.jpg?v=1752847274&width=1946');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;  /* ensures the image fills the banner responsively */
-  height: 400px;           /* adjust banner height as needed */
-}
+.nav-links.active { display: flex; }
+.nav-links a { text-decoration: none; color: #4e2a0a; font-weight: 500; }
 
 /* Hero */
 .hero {
   background: url('images/hero-bg.jpg') center/cover no-repeat;
-  color: #000000;     /* black color */
-  font-weight: bold;  /* makes text bold */
   text-align: center;
-  padding: 100px 20px;
+  padding: 60px 20px;
+  color: #000;
 }
-.hero-text h1 {
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-.hero-text p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
+.hero-text h1 { font-size: 24px; margin-bottom: 10px; }
+.hero-text p { font-size: 14px; margin-bottom: 18px; }
 .cta-btn {
-  background-color: #25D366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
   display: inline-block;
-}
-
-/* Classes */
-.class-cards {
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-.class-card {
-  padding: 18px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #fafafa;
-}
-.class-card h3 {
-  margin-bottom: 8px;
-}
-.class-card .btn {
-  margin-top: 12px;
-  width: 100%;
-}
-
-/* Gallery */
-.gallery {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.card {
-  width: 200px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-.card p {
-  padding: 8px;
-  font-weight: bold;
-  color: #4e2a0a;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
+  background: #25D366;
+  color: #fff;
   padding: 10px 15px;
   border-radius: 6px;
-  font-weight: 600;
   text-decoration: none;
-  transition: 0.3s;
+  font-weight: 600;
 }
-.whatsapp-btn {
-  background: #25D366;
-  color: white;
-}
-.whatsapp-btn:hover { background: #20b958; }
-.instagram-btn {
-  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
-  color: white;
-}
-.instagram-btn:hover { opacity: 0.9; }
 
-/* Location */
-.location-block {
-  margin: 20px auto;
-  padding: 15px;
+/* Cards (Classes & Products) */
+.class-cards, .gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+.class-card, .card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
   background: #fafafa;
-  border-left: 5px solid #4e2a0a;
-  max-width: 600px;
-  border-radius: 6px;
-  text-align: left;
+  padding: 15px;
+  text-align: center;
 }
+.card img { width: 100%; height: auto; border-radius: 6px; }
 
-/* Floating WhatsApp */
+/* WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25D366;
-  color: white;
-  font-size: 24px;
+  color: #fff;
+  font-size: 22px;
   padding: 12px;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  z-index: 1000;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
 }
-.whatsapp-float:hover { background: #20b958; }
 
 /* Footer */
-footer {
-  background: #f8f1e4;
-  padding: 12px;
-  text-align: center;
-  color: #4e2a0a;
-  font-size: 13px;
+footer { background: #f8f1e4; padding: 15px; text-align: center; font-size: 13px; }
+
+/* --- Tablets & Up --- */
+@media (min-width: 768px) {
+  .menu-toggle { display: none; }
+  .nav-links { display: flex; position: static; flex-direction: row; gap: 20px; box-shadow: none; }
+  .hero-text h1 { font-size: 32px; }
+  .hero-text p { font-size: 16px; }
+  .class-cards, .gallery { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #f8f1e4;
-    flex-direction: column;
-    width: 200px;
-    padding: 15px;
-    display: none;
-  }
-  .nav-links.active { display: flex; }
-  .menu-toggle { display: block; }
-
-  .hero-text h1 { font-size: 24px; }
-  .hero-text p { font-size: 14px; }
-  .card { width: 100%; }
+/* --- Desktop --- */
+@media (min-width: 1024px) {
+  .class-cards, .gallery { grid-template-columns: repeat(3, 1fr); }
 }
