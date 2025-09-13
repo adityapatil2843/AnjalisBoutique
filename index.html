@@ -5,8 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anjali Boutique</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* --- Top Banner (like Edge message) --- */
+    .top-banner {
+      background: #f1f1f1;
+      border-bottom: 1px solid #ddd;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 14px;
+      position: sticky;
+      top: 0;
+      z-index: 2000;
+    }
+    .top-banner strong {
+      color: #b03060;
+      font-size: 15px;
+    }
+    .top-banner small {
+      display: block;
+      margin-top: 3px;
+      color: #555;
+    }
+    .banner-close {
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      color: #444;
+      margin-left: 15px;
+    }
+    .banner-close:hover { color: #000; }
+  </style>
 </head>
 <body>
+
+  <!-- Top Banner -->
+  <div class="top-banner" id="topBanner">
+    <div>
+      <strong>✨ New! Boutique Classes Available ✨</strong>
+      <small>Join Anjali Boutique to learn blouse & saree design. Limited seats — enroll today!</small>
+    </div>
+    <span class="banner-close" onclick="document.getElementById('topBanner').style.display='none'">✕</span>
+  </div>
 
   <!-- Navbar -->
   <header>
@@ -137,4 +179,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
