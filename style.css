@@ -121,6 +121,89 @@ h1, h2, h3 {
   color: #4e2a0a;
 }
 
+/* Trends Section Styling */
+#trends {
+  padding: 60px 20px;
+  background: #faf9f6; /* soft off-white background */
+  text-align: center;
+}
+
+#trends h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+  position: relative;
+}
+
+#trends h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #c59d5f; /* golden accent */
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.trends {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.trends article {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 350px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.trends article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.trends h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.trends p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.trend-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trend-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Pinterest link */
+.trends a {
+  text-decoration: none;
+  color: #c59d5f;
+  font-weight: 600;
+}
+
+.trends a:hover {
+  text-decoration: underline;
+}
+
+
 /* Buttons */
 .btn {
   display: inline-block;
@@ -195,4 +278,3 @@ footer {
   .hero-text p { font-size: 14px; }
   .card { width: 100%; }
 }
-
