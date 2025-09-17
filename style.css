@@ -96,67 +96,30 @@ h1, h2, h3 {
   margin-top: 12px;
   width: 100%;
 }
-/* Products Section */
-#products {
-  padding: 60px 20px;
-  background: #fffdf9;
-  text-align: center;
-}
 
-#products h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #333;
-}
-
+/* Gallery */
 .gallery {
   display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
+  gap: 15px;
   justify-content: center;
+  flex-wrap: wrap;
 }
-
 .card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  max-width: 280px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   overflow: hidden;
 }
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.card a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.product-img {
+.card img {
   width: 100%;
-  height: auto;
-  display: block;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 180px;
+  object-fit: cover;
 }
-
-.product-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
-}
-
 .card p {
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #444;
-  background: #fafafa;
+  padding: 8px;
+  font-weight: bold;
+  color: #4e2a0a;
 }
-
 
 /* Trends Section Styling */
 #trends {
@@ -315,4 +278,3 @@ footer {
   .hero-text p { font-size: 14px; }
   .card { width: 100%; }
 }
-
