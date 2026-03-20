@@ -2,6 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 import Products from "./Products.jsx";
+import brideImg from '../assets/images/bride.png';
+import lehngaImg from '../assets/images/lehnga.jpeg';
+import weddingImg from '../assets/images/wedding.png';
 
 const Home = () => {
   return (
