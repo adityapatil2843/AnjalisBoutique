@@ -2,9 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 import Products from "./Products.jsx";
-import brideImg from '../assets/images/bride.png';
-import lehngaImg from '../assets/images/lehnga.jpeg';
-import weddingImg from '../assets/images/wedding.png';
+
 
 const Home = () => {
   return (
@@ -13,7 +11,7 @@ const Home = () => {
       {/* HERO */}
       <section
         className="min-h-screen flex items-center justify-center text-center bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/src/assets/images/anjali_logo_512.png')" }}
+        style={{ backgroundImage: "url('/assets/images/anjali_logo_512.png')" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
 
@@ -102,9 +100,9 @@ const Home = () => {
         <div className="grid md:grid-cols-3 gap-8 mt-10">
 
           {[
-            { img: "/src/assets/images/bride.png", name: "Bride's Blouse" },
-            { img: "/src/assets/images/lehnga.jpeg", name: "Lehnga Blouse" },
-            { img: "/src/assets/images/wedding.png", name: "Wedding Occasion" },
+            { img: "/assets/images/bride.png", name: "Bride's Blouse" },
+            { img: "/assets/images/lehnga.jpeg", name: "Lehnga Blouse" },
+            { img: "/assets/images/wedding.png", name: "Wedding Occasion" },
           ].map((item, i) => (
             <motion.div
               key={i}
