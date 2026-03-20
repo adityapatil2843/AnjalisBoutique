@@ -99,9 +99,9 @@ const Home = () => {
         <div className="grid md:grid-cols-3 gap-8 mt-10">
 
           {[
-            { img: "src/assets/images/bride.png", name: "Navari Blouse" },
-            { img: "src/assets/images/lehnga.jpeg", name: "Lehnga Blouse" },
-            { img: "src/assets/images/wedding.png", name: "Traditional Lugda" },
+            { img: "/assets/images/bride.png", name: "Bride's Blouse" },
+            { img: "/assets/images/lehnga.jpeg", name: "Lehnga Blouse" },
+            { img: "/assets/images/wedding.png", name: "Wedding Occasion" },
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -168,7 +168,7 @@ const Home = () => {
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
-            className="w-full h-[300px]"
+            className="w-full h-75"
           ></iframe>
         </div>
       </section>

@@ -44,9 +44,9 @@ const Navbar = () => {
       {/* Logo */}
       <div className="flex items-center gap-3">
         <img
-          src="src/assets/images/anjali_logo_512.png"
+          src="/assets/images/anjali_logo_512.png"
           alt="logo"
-          className="h-[50px] rounded-xl shadow-md"
+          className="h-12.5 rounded-xl shadow-md"
         />
         <h1 className="text-xl font-semibold tracking-wide text-pink-700">
           Anjali's Boutique

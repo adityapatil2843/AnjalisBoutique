@@ -16,7 +16,7 @@ const Header = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -80, opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-gradient-to-r from-pink-600 via-rose-500 to-pink-500 text-white px-6 py-3 flex items-center justify-between shadow-md"
+            className="bg-linear-to-r from-pink-600 via-rose-500 to-pink-500 text-white px-6 py-3 flex items-center justify-between shadow-md"
           >
             {/* LEFT CONTENT */}
             <div className="flex items-center gap-3 text-sm md:text-base">
