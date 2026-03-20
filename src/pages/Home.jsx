@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 import Products from "./Products.jsx";
 
+
 const Home = () => {
   return (
     <div className="bg-base-100 text-gray-800">
@@ -10,7 +11,7 @@ const Home = () => {
       {/* HERO */}
       <section
         className="min-h-screen flex items-center justify-center text-center bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+        style={{ backgroundImage: "url('/assets/images/anjali_logo_512.png')" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
 
