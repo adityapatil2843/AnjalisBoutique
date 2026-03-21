@@ -16,10 +16,10 @@ const Header = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -80, opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-linear-to-r from-pink-600 via-rose-500 to-pink-500 text-white px-6 py-3 flex items-center justify-between shadow-md"
+            className="bg-gradient-to-r from-pink-600 via-rose-500 to-pink-500 text-white px-3 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between shadow-md"
           >
             {/* LEFT CONTENT */}
-            <div className="flex items-center gap-3 text-sm md:text-base">
+            <div className="flex items-center gap-2 text-[11px] sm:text-sm md:text-base leading-tight">
               <FaStar className="text-yellow-300" />
               <p className="font-medium">
                 <strong>New Batch Open!</strong>{" "}
@@ -28,10 +28,10 @@ const Header = () => {
               </p>
             </div>
 
-            {/* RIGHT CLOSE BUTTON */}
+            {/* CLOSE BUTTON */}
             <button
               onClick={() => setShowBanner(false)}
-              className="text-lg hover:scale-110 transition"
+              className="text-lg p-1 hover:scale-110 transition"
             >
               <FaTimes />
             </button>
@@ -45,7 +45,7 @@ const Header = () => {
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white/80 backdrop-blur-md shadow-sm"
+          className="bg-white/90 backdrop-blur-md shadow-sm"
         >
           <Navbar />
         </motion.div>

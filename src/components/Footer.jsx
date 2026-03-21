@@ -10,7 +10,7 @@ const Footer = () => {
       transition={{ duration: 0.8 }}
       className="bg-base-200 text-gray-700 px-6 py-12 mt-10"
     >
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 px-4 sm:px-0">
 
         {/* BRAND */}
         <div>

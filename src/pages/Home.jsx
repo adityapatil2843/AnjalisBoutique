@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <div className="bg-base-100 text-gray-800">
 
-      {/* HERO */}
+      {/* HERO fixed top-0 right-0 h-full w-[82%] max-w-sm*/}
       <section
-        className="min-h-screen flex items-center justify-center text-center bg-cover bg-center relative"
+        className="min-h-screen sm:px-6 flex items-center justify-center text-center bg-cover bg-center relative z-40"
         style={{ backgroundImage: "url('/assets/images/anjali_logo_512.png')" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
