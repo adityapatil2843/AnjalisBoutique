@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaInstagram, FaHeart } from "react-icons/fa";
+import { INSTAGRAM_URL } from "../config/constants";
 
 const Footer = () => {
   return (
@@ -8,16 +9,16 @@ const Footer = () => {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-base-200 text-gray-700 px-6 py-12 mt-10"
+      className="bg-base-200 text-base-content px-6 py-12 mt-10"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 px-4 sm:px-0">
 
         {/* BRAND */}
         <div>
-          <h2 className="text-xl font-semibold text-pink-700">
+          <h2 className="text-xl font-semibold text-primary">
             Anjali's Boutique
           </h2>
-          <p className="mt-3 text-sm text-gray-600">
+          <p className="mt-3 text-sm text-base-content/80">
             Blending Marathi tradition with modern elegance.  
             Crafting beauty, one stitch at a time 🌸
           </p>
@@ -31,7 +32,7 @@ const Footer = () => {
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
-                  className="hover:text-pink-600 transition"
+                  className="hover:text-primary transition"
                 >
                   {item}
                 </a>
@@ -44,7 +45,7 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-3">Connect With Us</h3>
 
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-base-content/80">
             Akola, Maharashtra
           </p>
 
@@ -59,7 +60,9 @@ const Footer = () => {
             </a>
 
             <a
-              href="#"
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
               className="text-pink-500 hover:scale-110 transition"
             >
               <FaInstagram />
@@ -78,7 +81,7 @@ const Footer = () => {
       </div>
 
       {/* BOTTOM LINE */}
-      <div className="text-center mt-10 text-sm text-gray-500 border-t pt-4">
+      <div className="text-center mt-10 text-sm text-base-content/60 border-t border-base-300 pt-4">
         <p className="flex items-center justify-center gap-2">
           © 2025 Anjali Boutique | Made with <FaHeart className="text-red-500" /> in Maharashtra
         </p>

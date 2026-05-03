@@ -1,1 +1,23 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+/* DaisyUI Custom Themes */
+[data-theme="anjali-light"] {
+  color-scheme: light;
+  --color-base-100: #FFF5F7;
+  --color-primary: #E91E8C;
+  --color-secondary: #C9A84C;
+  --color-base-content: #2D2D2D;
+}
+
+[data-theme="anjali-dark"] {
+  color-scheme: dark;
+  --color-base-100: #1A0A0F;
+  --color-primary: #FF6BB5;
+  --color-secondary: #F0C040;
+  --color-base-content: #F5E6EB;
+}
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

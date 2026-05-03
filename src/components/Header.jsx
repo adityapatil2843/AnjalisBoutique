@@ -45,7 +45,7 @@ const Header = () => {
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white/90 backdrop-blur-md shadow-sm"
+          className="bg-base-100/90 backdrop-blur-md shadow-sm"
         >
           <Navbar />
         </motion.div>

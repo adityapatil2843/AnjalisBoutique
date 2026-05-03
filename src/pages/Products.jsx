@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Products = () => {
   return (
@@ -12,9 +13,9 @@ const Products = () => {
         <div className="grid md:grid-cols-3 gap-8 mt-10">
 
           {[
-            { img: "src/assets/images/bride.png", name: "Navari Blouse" },
-            { img: "src/assets/images/lehnga.jpeg", name: "Lehnga Blouse" },
-            { img: "src/assets/images/wedding.png", name: "Traditional Lugda" },
+            { img: "src/images/bride.png", name: "Navari Blouse" },
+            { img: "src/images/lehnga.jpeg", name: "Lehnga Blouse" },
+            { img: "src/images/wedding.png", name: "Traditional Lugda" },
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -41,3 +42,4 @@ const Products = () => {
 }
 
 export default Products
+

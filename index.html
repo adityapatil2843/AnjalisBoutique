@@ -2,12 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="src/assets/images/anjali_logo_512.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>anjalisboutique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- PWA Primary Color -->
+    <meta name="theme-color" content="#1A0A0F" />
+    <link rel="icon" type="image/png" href="/images/anjali_logo_512.png" />
+    <link rel="apple-touch-icon" href="/images/anjali_logo_512.png">
+
+    <!-- SEO Meta Tags -->
+    <title>Anjali's Boutique | Premium Tailoring & Classes in Akola</title>
+    <meta name="description" content="Discover premium custom stitching, bridal wear, and professional tailoring classes at Anjali's Boutique in Akola. Craft elegance with every stitch." />
+    <meta name="keywords" content="Boutique in Akola, tailoring classes, bridal blouse, nauvari saree, Anjali Patil, tailor near me, custom stitching" />
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://anjalisboutique.example.com/" />
+    <meta property="og:title" content="Anjali's Boutique | Premium Tailoring" />
+    <meta property="og:description" content="Custom stitching, bridal wear, and tailoring classes in Akola." />
+    <meta property="og:image" content="/images/anjali_logo_512.png" />
+
+    <!-- Schema Markup (JSON-LD) for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Anjali's Boutique",
+      "image": "https://anjalisboutique.example.com/images/anjali_logo_512.png",
+      "telephone": "+919527231973",
+      "url": "https://anjalisboutique.example.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Akola",
+        "addressLocality": "Akola",
+        "addressRegion": "MH",
+        "postalCode": "444001",
+        "addressCountry": "IN"
+      },
+      "priceRange": "₹₹",
+      "description": "Premium female tailoring boutique and tailoring classes in Akola."
+    }
+    </script>
+
   </head>
-  <body>
+  <body class="overflow-x-hidden bg-base-100 text-base-content antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
